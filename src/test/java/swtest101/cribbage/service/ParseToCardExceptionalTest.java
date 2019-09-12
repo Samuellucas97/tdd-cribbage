@@ -20,13 +20,29 @@ public class ParseToCardExceptionalTest {
 	@Parameters(name = "{3}-{0}_ShouldThrow_{1}")
 	public static Collection<Object[]> buildData() {
 		return Arrays.asList(new Object[][] { //
-				{ "XH", InvalidRankException.class, ParseStringService.INVALID_RANK_CHAR_ERROR_MSG, "InvalidRank1" }, //
-				{ "OC", InvalidRankException.class, ParseStringService.INVALID_RANK_CHAR_ERROR_MSG, "InvalidRank2" }, //
-				{ "0*", InputParseException.class, ParseStringService.INVALID_SUIT_CHAR_ERROR_MSG, "InvalidSuit1" }, //
-				{ "0J", InputParseException.class, ParseStringService.INVALID_SUIT_CHAR_ERROR_MSG, "InvalidSuit2" }, //
-				{ "10H", InputParseException.class, ParseStringService.INVALID_CARD_STRING_ERROR_MSG, "InvalidCard1" }, //
-				{ "0 S", InputParseException.class, ParseStringService.INVALID_CARD_STRING_ERROR_MSG, "InvalidCard2" },//
-		});
+						{ "XH", InvalidRankException.class,
+								ParseStringService.INVALID_RANK_CHAR_ERROR_MSG,
+								"InvalidRank1" }, //
+						{ "OC", InvalidRankException.class,
+								ParseStringService.INVALID_RANK_CHAR_ERROR_MSG,
+								"InvalidRank2" }, //
+						{ "0*", InputParseException.class,
+								ParseStringService.INVALID_SUIT_CHAR_ERROR_MSG,
+								"InvalidSuit1" }, //
+						{ "0J", InputParseException.class,
+								ParseStringService.INVALID_SUIT_CHAR_ERROR_MSG,
+								"InvalidSuit2" }, //
+						{
+								"10H",
+								InputParseException.class,
+								ParseStringService.INVALID_CARD_STRING_ERROR_MSG,
+								"InvalidCard1" }, //
+						{
+								"0 S",
+								InputParseException.class,
+								ParseStringService.INVALID_CARD_STRING_ERROR_MSG,
+								"InvalidCard2" },//
+				});
 	}
 
 	@Rule
